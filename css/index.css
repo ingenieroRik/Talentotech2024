@@ -44,7 +44,8 @@ body {
     background-color: blue;
     background: -webkit-linear-gradient(top, rgb(50, 50, 204), rgb(94, 163, 175));
     color: #ffffff;
-    height: 10vh;
+    /*height: 10vh;*/
+    height: initial;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -103,6 +104,9 @@ body {
 
 .linkNav.iniciarSesion:hover {
     background-color: var(--color-principal);
+}
+.marquesina{
+   
 }
 
 /* Estilos Header - Mobile y Tablet */
@@ -533,6 +537,9 @@ a {
         }
     }
 }
+
+
+
 
 /* Línea de división */
 hr {

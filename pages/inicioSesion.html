@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CuentavueltasDigitales</title>
    
-   
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/register.css">
     <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c0e6f14933.js" crossorigin="anonymous"></script>
    
     <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
 
-   
+    <script defer src="../js/inicioSesion.js"></script>
 
 </head>
 <body class="bodyRegistrarse">
 
     <header class="headerRegistrarse">
         <a class="anclaLogo" href="../index.html">
-            <i class="fa-solid fa-gears" aria-hidden="true"></i>
+            <img src="../assets/img/favicon.ico" alt="logo">
+           
             <span>Cuentavueltas digitales</span>
         </a>
        
@@ -27,7 +29,7 @@
     
     <main id="main" class="main">
         <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse">
-         
+          <!--pongo get ya que en github pages da error el method post-->
             <form action="" method="get" class="form-login">
                 <h2 class="tituloRegistrarse">Iniciar Sesión</h2>
                 <div >
@@ -38,11 +40,11 @@
 
                 <div>
                     <div class= "password_eye" >
-                     
+                       <!-- Campo de contraseña -->
                         <input  class="inputData"  type="password" placeholder="Contraseña" required id="password" name="password">
                         <div class="error-text"  id></div>
-                     
-                        <i id="toggleIcon" class="fa fa-eye ojo" ></i>               
+                       <!-- Icono para alternar visibilidad de la contraseña -->
+                        <i id="toggleIcon" class="fa fa-eye ojo" onclick="verPassword()"></i>               
                     </div>
                    
                 </div>
@@ -57,5 +59,22 @@
         </section>
     </main>
    
-   
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        function verPassword() {
+          var passwordInput = document.getElementById("password");
+          var toggleIcon = document.getElementById("toggleIcon");
+    
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            toggleIcon.className = "fa fa-eye-slash ojo";
+          } else {
+            passwordInput.type = "password";
+            toggleIcon.className = "fa fa-eye ojo";
+          }
+        }
+      </script>
 </body>
