@@ -26,6 +26,11 @@
                 <li class="listaItem"><a class="linkNav" href="./pages/videos.html">Videos</a></li>
                 <li class="listaItem"><a class="linkNav" href="./pages/registrarse.html">Registrarse</a></li>
                 <li class="listaItem"><a class="linkNav iniciarSesion" href="./pages/inicioSesion.html">Iniciar Sesión</a></li>
+                <li class="listaItem"><a  class="linkNav iniciarSesion" href="./pages/carrito.html" ><i class="fa-solid fa-cart-shopping carrito"></i> 
+                    <span class="cart-number"  id="cantidad-carrito">0</span></a></li>
+
+
+
             </ul>
         </nav>
         <marquee scrollamount="06" class="marquesina">
@@ -127,5 +132,19 @@
     <script>
     AOS.init();
     </script>
+    <script>
+        // Función para actualizar la cantidad de artículos en el carrito
+        function actualizarCantidadCarrito() {
+            var carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            document.getElementById('cantidad-carrito').textContent = carrito.length;
+        }
+        
+        // Inicializar el contador al cargar la página
+        document.addEventListener('DOMContentLoaded', (event) => {
+            actualizarCantidadCarrito();
+        });
+        </script>
+
+
 </body>
 </html>
