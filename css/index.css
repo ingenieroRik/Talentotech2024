@@ -271,8 +271,9 @@ a {
     height: 400px;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 2%;
     transition: all 0.5s ease;
+   
 }
 
 .imgTendencia {
@@ -280,6 +281,7 @@ a {
     height: 100%;
     object-fit: contain;
     border-radius: 10px;
+   
 }
 
 .tituloFoto {
@@ -293,7 +295,7 @@ a {
     transform: translateY(-50%) translateX(-50%);
 }
 
-.tituloFoto h4 {
+.tituloFoto h4{
     font-size: 1.2rem;
     font-weight: bold;
     opacity: 0;
@@ -301,13 +303,18 @@ a {
     letter-spacing: 0.1rem;
     transition: opacity 0.5s ease-in-out;
 }
+.registrado {
+    opacity: 0;
+    font-size: .8rem;
+}
+
 
 .foto:hover {
     box-shadow: 0 0 30px #9f3648cd;
     transform: scale(0.95);
 }
 
-.foto:hover h4 {
+.foto:hover h4 , .foto:hover p {
     opacity: 1;
 }
 
